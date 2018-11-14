@@ -1,0 +1,6 @@
+EM3288_870A
+M:	Simon Chen <simon@yeacreate.com>
+S:	Maintained
+F:	board/rockchip/EM3288_870A
+F:	include/configs/EM3288_870A.h
+F:	configs/EM3288_870A_defconfig
