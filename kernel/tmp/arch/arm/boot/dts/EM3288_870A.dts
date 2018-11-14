@@ -48,7 +48,6 @@
 #include <dt-bindings/soc/rockchip-system-status.h>
 #include "rk3288.dtsi"
 #include "rk3288-linux.dtsi"
-#include "rk3288-pinctrl.dtsi"
 
 / {
 	model = "EM3288_870A";
