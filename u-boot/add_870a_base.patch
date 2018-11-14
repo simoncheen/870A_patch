@@ -1,5 +1,5 @@
 diff --git a/arch/arm/mach-rockchip/rk3288/Kconfig b/arch/arm/mach-rockchip/rk3288/Kconfig
-index bbab13f304..7e43b6f33f 100644
+index bbab13f304..beabc90786 100644
 --- a/arch/arm/mach-rockchip/rk3288/Kconfig
 +++ b/arch/arm/mach-rockchip/rk3288/Kconfig
 @@ -59,6 +59,15 @@ config TARGET_FENNEC_RK3288
@@ -7,13 +7,13 @@ index bbab13f304..7e43b6f33f 100644
  	  provide access to display pins, I2C, SPI, UART and GPIOs.
  
 +config TARGET_EM3288_870A
-+        bool "EM3288_870A"
-+        select BOARD_LATE_INIT
-+        help
-+          Fennec is a RK3288-based development board with 2 USB ports,
-+          HDMI, micro-SD card, audio, WiFi and Gigabit Ethernet. It also
-+          includes on-board 16G eMMC and 2GB of SDRAM. Expansion connectors
-+          provide access to display pins, I2C, SPI, UART and GPIOs.
++    bool "EM3288_870A"
++    select BOARD_LATE_INIT
++    help
++      Fennec is a RK3288-based development board with 2 USB ports,
++      HDMI, micro-SD card, audio, WiFi and Gigabit Ethernet. It also
++      includes on-board 16G eMMC and 2GB of SDRAM. Expansion connectors
++      provide access to display pins, I2C, SPI, UART and GPIOs.	  
 +	  
  config TARGET_FIREFLY_RK3288
  	bool "Firefly-RK3288"
@@ -29,7 +29,7 @@ index bbab13f304..7e43b6f33f 100644
  endif
 diff --git a/board/rockchip/EM3288_870A/EM3288_870A.c b/board/rockchip/EM3288_870A/EM3288_870A.c
 new file mode 100644
-index 0000000000..68af3527fa
+index 0000000000..846deddb80
 --- /dev/null
 +++ b/board/rockchip/EM3288_870A/EM3288_870A.c
 @@ -0,0 +1,8 @@
@@ -43,7 +43,7 @@ index 0000000000..68af3527fa
 +#include <spl.h>
 diff --git a/board/rockchip/EM3288_870A/Kconfig b/board/rockchip/EM3288_870A/Kconfig
 new file mode 100644
-index 0000000000..091be7bb6c
+index 0000000000..13ea8f9b41
 --- /dev/null
 +++ b/board/rockchip/EM3288_870A/Kconfig
 @@ -0,0 +1,15 @@
@@ -64,7 +64,7 @@ index 0000000000..091be7bb6c
 +endif
 diff --git a/board/rockchip/EM3288_870A/MAINTAINERS b/board/rockchip/EM3288_870A/MAINTAINERS
 new file mode 100644
-index 0000000000..6e8a2c3e93
+index 0000000000..d8561caf48
 --- /dev/null
 +++ b/board/rockchip/EM3288_870A/MAINTAINERS
 @@ -0,0 +1,6 @@
@@ -76,7 +76,7 @@ index 0000000000..6e8a2c3e93
 +F:	configs/EM3288_870A_defconfig
 diff --git a/board/rockchip/EM3288_870A/Makefile b/board/rockchip/EM3288_870A/Makefile
 new file mode 100644
-index 0000000000..d560b201ee
+index 0000000000..29a8e844bd
 --- /dev/null
 +++ b/board/rockchip/EM3288_870A/Makefile
 @@ -0,0 +1,7 @@
@@ -89,7 +89,7 @@ index 0000000000..d560b201ee
 +obj-y	+= EM3288_870A.o
 diff --git a/include/configs/EM3288_870A.h b/include/configs/EM3288_870A.h
 new file mode 100644
-index 0000000000..79f21ccd81
+index 0000000000..8482826f3b
 --- /dev/null
 +++ b/include/configs/EM3288_870A.h
 @@ -0,0 +1,18 @@
