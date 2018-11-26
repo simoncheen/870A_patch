@@ -1,5 +1,12 @@
 # 上传文件，分别打patch #
 
+```bash
+sudo dpkg -i ./rootfs/ubuntu-build-service/packages/live-build_3.0.5-1linaro1_all.deb
+```
+
+```bash
+sudo apt-get install qemu-user-static
+```
 
 # 配置变量环境 #
 ```bash
